@@ -8,32 +8,32 @@ Temperature::Temperature()
 
 boolean Temperature::isEthlyFreezing(int temp)
 {
-	return boolean();
+	return temp < -173;
 }
 
 boolean Temperature::isEthlyBoiling(int temp)
 {
-	return boolean();
+	return temp > 172;
 }
 
 boolean Temperature::isOxygenFreezing(int temp)
 {
-	return boolean();
+	return temp < -362;
 }
 
 boolean Temperature::isOxygenBoiling(int temp)
 {
-	return boolean();
+	return temp > -306;
 }
 
 boolean Temperature::isWaterFreezing(int temp)
 {
-	return boolean();
+	return temp < 32;
 }
 
 boolean Temperature::isWaterBoiling(int temp)
 {
-	return boolean();
+	return temp > 212;
 }
 
 Temperature::~Temperature()

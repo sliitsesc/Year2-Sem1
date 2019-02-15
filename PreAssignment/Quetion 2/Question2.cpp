@@ -7,8 +7,8 @@ int main(){
     int temp;
     Temperature *temperature = new Temperature();
 
-    cout << Please enter the temperature : <<;
+    cout << Please enter the temperature : << endl;
     cin >> temp;
 
-
+    delete temperature;
 }
