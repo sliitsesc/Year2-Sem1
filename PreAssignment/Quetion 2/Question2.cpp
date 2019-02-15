@@ -10,5 +10,7 @@ int main(){
     cout << Please enter the temperature : << endl;
     cin >> temp;
 
+    if(temperature->)
+
     delete temperature;
 }
