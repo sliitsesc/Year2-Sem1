@@ -1,18 +1,23 @@
 import java.util.Scanner;
 
+//Student class
 class Student{
+
+    //variable declaration
     private String studentId;
     private String studentName;
     private double studentAvg;
 
     private int mark1, mark2, mark3;
 
+    //default constructor
     Student(){
         this.mark1 = 0;
         this.mark2 = 0;
         this.mark3 = 0;
     }
 
+    //parameterized constructor
     public Student(String studentId, String studentName, int mark1, int mark2, int mark3) {
         this.studentId = studentId;
         this.studentName = studentName;
@@ -41,10 +46,12 @@ class Student{
         this.mark3 = mark3;
     }
 
+    //calculate average mark
     public void calAverageMark(){
         this.studentAvg = (mark1 + mark2 + mark3)/3.0;
     }
 
+    //display function
     public void displayDetails(){
         System.out.println("Student ID : " + studentId);
         System.out.println("Student Name : " + studentName);
@@ -54,6 +61,7 @@ class Student{
 
 class Exercise1{
 
+    //main method
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Student student = new Student();
