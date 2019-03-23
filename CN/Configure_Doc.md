@@ -10,6 +10,6 @@
 `Router#copy running-config startup-config` - To save all configurations
 
 ### To reset Password
-`no enable password`
-`enable secret <SECRET PASSWORD>`
-enable secret <SECRET PASSWORD>
+`no enable password`        
+`enable secret <SECRET PASSWORD>`       
+`enable secret <SECRET PASSWORD>`         
