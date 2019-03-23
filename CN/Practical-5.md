@@ -86,10 +86,26 @@ Router(config)#interface se0/0/1
 Router(config-if)#clock rate 64000
 ```
 
-Password
+### Task 2
+a. Apply the following credentials –
 ```
 Router>enable
 Router#conf ter
 Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#enable secret S$L1iT
 ```
+
+```
+Router(config)#line console 0 
+Router(config-line)#password C$L1iT
+Router(config-line)#login
+Router(config-line)#exit
+```
+
+```
+Router(config)#line vty 0 4
+Router(config-line)#password T$l1iT
+Router(config-line)#login 
+Router(config-line)#exit
+```
+
