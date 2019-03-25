@@ -38,7 +38,7 @@ Pros -
 
 Load Balancing is the phenomena which keeps the workload evenly distributed across all processors in an SMP system. ... Pull Migration – Pull Migration occurs when an idle processor pulls a waiting task from a busy processor for its execution.
 
-### 6. Briefly explain the eachterm.
+### 6. Briefly explain the each term.
 
 * Throughput - Number of processes completed per unit time.
 * Microkernel -  A microkernel is the minimum software that is required to correctly implement an operating system.
