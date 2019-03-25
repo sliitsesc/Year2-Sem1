@@ -27,3 +27,22 @@ int main()
 ```
 Output :  
 ~$ PARENT: value= 40
+
+### 4. Consider the following C program.
+// Assume variables i and pid,have been properly defined, and/or initialized and there is no syntax error.
+
+```
+int main ( ) {
+    for(i =0; i <3; i++) { 
+        pid = fork (); 
+    }
+}
+```
+How many child processes are created when the program is executed?
+
+### 5. Describe the difference among short-term, medium-term and long-term scheduling.
+
+*Short-term scheduling* involves selecting one of the processes from the ready queue and scheduling them for execution. ... The short-term scheduler executes much more frequently than the long-term scheduler as a process may execute only for a few milliseconds. The choices of the short term scheduler are very important.
+
+### 6. Describe the actions a kernel takes to context switch between processes.
+
