@@ -46,3 +46,12 @@ How many child processes are created when the program is executed?
 
 ### 6. Describe the actions a kernel takes to context switch between processes.
 
+### 7. Draw the diagram showing all possible process states and describe them.
+
+### 8. Give two reasons for the system to select a new process to run.
+
+### 9. What is the process control block? List at least four pieces of information that are included in the PCB
+
+Process Control Block (PCB, also called Task Controlling Block, Entry of the Process Table, Task Struct, or Switchframe) is a data structure in the operating system kernel containing the information needed to manage the scheduling of a particular process.
+![](https://1.bp.blogspot.com/-DoCFzIcQGDs/VlnGRLw69mI/AAAAAAAAAz0/xxrtrqK39FU/s1600/process%2Blooks%2Bin%2Bmemory.jpg)
+
