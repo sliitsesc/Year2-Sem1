@@ -5,7 +5,7 @@
 ### 2. A process is a program in execution, and therefore a process is more than just the program. Explain why a processis different from a program?
 
 ### 3.Consider the following program. What will be the output in Line A?
-```
+```c
 #include <stdio.h> 
 #include <sys/types.h> 
 #include <unistd.h> 
