@@ -10,7 +10,7 @@
 `Router#copy running-config startup-config` - To save all configurations
 
 ### Static Route
-`ip route <DESTINATION IP> <DESTINATION SUBNET MASK> <NEXT STOP IP>`      
+`ip route <DESTINATION NETWORK> <DESTINATION NETWORK SUBNET MASK> <NEXT HOP ADDRESS>`      
 
 ### Default Routing
 `ip address 0.0.0.0 0.0.0.0 <NEXT STOP IP>`
