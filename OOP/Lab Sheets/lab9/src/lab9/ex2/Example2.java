@@ -9,10 +9,10 @@ public class Example2 {
 		
 		for (int i = 0; i < 3; i++) {
 			System.out.print("Enter student ID : ");
-			String id = scanner.nextLine();
+			String id = scanner.next();
 			
 			System.out.print("Enter student Name : ");
-			String name = scanner.nextLine();
+			String name = scanner.next();
 			
 			System.out.print("Enter student GPA : ");
 			double gpa = scanner.nextDouble();
@@ -20,6 +20,12 @@ public class Example2 {
 			Student student = new Student(id,name,gpa);
 			
 			students.add(student);
+		}
+		
+		for (Student student : students) {
+			System.out.println("Student ID : " + student.getStudentID());
+			System.out.println("Student Name : " + student.getName());
+			System.out.println("Student GPA : " + student.getGpa() + "\n");
 		}
 	}
 }
