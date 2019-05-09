@@ -6,7 +6,7 @@ import java.util.ArrayList;
  **/
 public class Batch {
     String name;
-    ArrayList<MScStudent> mscStudents;
+    ArrayList<MScStudent> mscStudents = new ArrayList<>();
 
     public Batch(String name) {
         this.name = name;
