@@ -14,7 +14,7 @@ int main()
         printf("Child's Parent PID : %d\n", getpid());
     }else{
         printf("I'm Parent and Return Value = %d\n", ret);
-        printf("Parent PID : %d\n", getpid());
+        printf("Parent PID : %d\n", getppid());
     }
 
     sleep(20);
