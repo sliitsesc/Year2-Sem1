@@ -2,7 +2,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int main(){
+int main()
+{
     int ret;
 
     printf("Hello World\n");
