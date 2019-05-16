@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 int main()
 {
@@ -15,7 +16,7 @@ int main()
     }
     else
     {
-        wait();
+        wait(NULL);
         printf("Child ID : %d \n", childID);
     }
 }
