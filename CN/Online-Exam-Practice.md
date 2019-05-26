@@ -11,5 +11,7 @@ interface fa0/4
 switchport mode trunk
 exit
 
-
+vtp domain SLIIT
+vtp password 123
+vtp mode server
 ```
