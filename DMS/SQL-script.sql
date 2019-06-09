@@ -1,5 +1,9 @@
 -- Views
-create view //
+create view dept_info(dname,budget,manager)
+as
+select d.dname, d.budget, e.ename 
+from emp e, dept d
+where e.eid = d.managerId
 
 -- Funtions 
 create Funtion getEmployeeSal(@did varchar) returns real
