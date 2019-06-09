@@ -21,3 +21,10 @@ begin
 end
 
 -- stored procedure
+create procedure get_stats(@did varchar(12), @maxm real output, @minm real output)
+as
+begin
+    select @maxm = max(e.salary), @minm = min(e.salary)
+    from dept d, works w, emp e
+    where d.did = w.did and w.eid = e.eid and d.did = @did
+end
