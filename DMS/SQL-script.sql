@@ -38,3 +38,19 @@ begin
     where w.eid = e.eid and d.did = w.did and d.did = @did
 end
 
+-- triggers
+/* 
+    Create a trigger to track all inserts/updates done to the balance field of an Account table at a bank in 
+    the AccountAudit table
+ */
+create trigger account
+on account
+for insert, update
+as
+begin
+    declare @ano int 
+    declare @balance float
+
+    select @ano = accountNo, @balance = balance from inserted
+    insert into accountAudit(@ano, @balance, getdate())
+end
