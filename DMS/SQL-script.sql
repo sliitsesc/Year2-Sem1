@@ -28,3 +28,13 @@ begin
     from dept d, works w, emp e
     where d.did = w.did and w.eid = e.eid and d.did = @did
 end
+
+-- Ex 3 
+create procedure getManager(@did varchar(12), @name varchar(50) output, @salary real output)
+as 
+begin
+    select @name = e.name, @salary = e.salary
+    from emp e, dept d, works w
+    where w.eid = e.eid and d.did = w.did and d.did = @did
+end
+
