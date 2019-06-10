@@ -58,3 +58,13 @@ begin
     select @ano = accountNo, @balance = balance from inserted
     insert into accountAudit(@ano, @balance, getdate())
 end
+
+
+create trigger updateSupplyInfor
+on supplies
+for insert, update
+as
+begin
+    declare @pid int 
+    declare @units int
+end
