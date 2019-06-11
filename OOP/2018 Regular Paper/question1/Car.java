@@ -2,8 +2,8 @@ package question1;
 
 public class Car extends Item {
 
-	String model;
-	String type;
+	private String model;
+	private String type;
 	
 	Car(int no, String des, double price,String model,String type) {
 		

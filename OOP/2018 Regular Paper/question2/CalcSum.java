@@ -2,7 +2,7 @@ package question2;
 
 public class CalcSum implements Runnable {
 
-	int total;
+	private int total;
 	
 	@Override
 	public void run() {

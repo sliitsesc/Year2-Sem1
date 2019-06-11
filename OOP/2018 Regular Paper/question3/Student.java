@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Student {
 
-	int id;
-	String names;
-	float marks[];
-	int noOfSubjects;
+	private int id;
+	private String names;
+	private float marks[];
+	private int noOfSubjects;
 	Scanner sc = new Scanner(System.in);
 	
 	public Student(int id,String names) {

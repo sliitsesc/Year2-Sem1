@@ -2,9 +2,9 @@ package question1;
 
 public class Book extends Item {
 
-	String Publisher;
-	String category;
-	int pages;
+	private String Publisher;
+	private String category;
+	private int pages;
 	
 	Book(int no, String des, double price,String pub,String cat,int pages) {
 		

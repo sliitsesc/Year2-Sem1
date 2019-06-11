@@ -2,7 +2,7 @@ package question3;
 
 public class MarksException extends Exception {
 
-	int marks;
+	private int marks;
 	
 	public MarksException(int marks) {
 		

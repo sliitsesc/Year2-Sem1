@@ -2,9 +2,9 @@ package question1;
 
 public abstract class Item {
 
-	int itemNo;
-	String description;
-	double unitPrice;
+	protected int itemNo;
+	protected String description;
+	protected double unitPrice;
 	
 	Item(int no,String des,double price){
 		this.itemNo=no;
