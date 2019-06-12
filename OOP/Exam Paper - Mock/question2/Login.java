@@ -3,6 +3,9 @@ package question2;
 public class Login {
 
 	private static Login login;
+
+	private Login(){
+	}
 	
 	public static Login getInstance() {
 		if(login == null) {
