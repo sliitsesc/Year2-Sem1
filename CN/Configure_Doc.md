@@ -24,4 +24,20 @@
 ### To reset Password
 `no enable password`        
 `enable secret <SECRET PASSWORD>`       
-`enable secret <SECRET PASSWORD>`         
+`enable secret <SECRET PASSWORD>`    
+
+### Enable ACL configuration 
+```
+access-list <ACCESS-LIST-NUMBER>
+{permit/deny} 
+{source address} {wildcard mask}
+```
+
+### Enable extended ACL configuration
+```
+access-list <ACCESS-LIST-NUMBER>
+{permit/deny} {protocol}
+{source address} {source wildcast mask}
+{destination address} {wildcast mask}
+{any} {port number}
+```
