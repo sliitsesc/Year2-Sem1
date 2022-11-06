@@ -33,4 +33,10 @@ CREATE TABLE Works
 	CONSTRAINT Works_Dept_fk FOREIGN KEY (did) REFERENCES Dept -- add foreign key - 2nd  way
 );
 
+--Q4--
+
+INSERT INTO Emp VALUES (1000,'Ruwan', 33, 40000); -- insert value in to Emp table - 1st way
+INSERT INTO Emp(eid,ename,salary) VALUES (1001,'Nuwan',55000); -- insert value in to Emp table - 2nd way(we can specify the table column)
+
+
 
