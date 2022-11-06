@@ -145,3 +145,30 @@ INSERT INTO Dept VALUES ('D001',20000,1001);
 SELECT d.did,e.ename
 FROM Emp e, Dept d
 WHERE e.eid = d.managerID;
+
+
+--Q15-or each employee who is earning more than 75000 display the name of the employee and the id of the manager--
+
+--insert values to Emp table--
+INSERT INTO Emp VALUES (1003,'Anura',35,31000);
+INSERT INTO Emp VALUES (1004,'Minura',37,45000);
+INSERT INTO Emp VALUES (1005,'Ann',25,44000);
+INSERT INTO Emp VALUES (1006,'Nusann',45,78000);
+--insert values to Dept table--
+INSERT INTO Dept VALUES ('D002',25000,1004);
+INSERT INTO Dept VALUES ('D003',32000,1006);
+--insert values to Works table--
+INSERT INTO Works VALUES (1001,'D001',5);
+INSERT INTO Works VALUES (1004,'D002',3);
+INSERT INTO Works VALUES (1006,'D003',4);
+
+--Display all the values of the tables--
+SELECT * FROM Emp
+SELECT * FROM Dept
+SELECT * FROM Works
+
+
+--answer--
+SELECT e.ename, d.managerID
+FROM Emp e, Works w, Dept d
+WHERE e.eid = w.eid AND d.did = w.did AND e.salary  >75000 
