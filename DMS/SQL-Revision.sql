@@ -116,4 +116,21 @@ ORDER BY salary DESC;
 --Q12-Display the name and the salary of all employees who obtain a salary greater than 50000.--
 SELECT ename,salary
 FROM Emp
-WHERE salary > 50000
+WHERE salary > 50000;
+
+--Q13-Display the name of all employees whose name starts with a letter ‘S’--
+SELECT ename
+FROM Emp
+WHERE ename LIKE 'S%';
+
+
+-- LIKE operator -- 
+
+	-- used for match patterns 
+	-- syntax : <string> LIKE <pattern>
+	-- <pattern> may contain two special symbols: 
+				-- (1)       %   - any sequence of characters
+										-- Ex: LIKE '%i' - any sequence of characters can be before the 'i' and should end with 'i'
+										-- Ex: LIKE 'i%' - any sequence of characters can be after the 'i' and should start with 'i'
+				-- (2)       _   - any single characters
+										-- Ex: LIKE '%i_' - any sequence of characters can be before the 'i' and should end with any single character											
