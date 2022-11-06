@@ -102,3 +102,8 @@ DROP TABLE Emp;
 --inorder to drop the table
 			-- 1st way - we can drop the Dept and Works tables
 			-- 2nd way - we can drop the foreign keys in the Emp table
+
+
+--Q10--
+SELECT ename,salary
+FROM Emp;
