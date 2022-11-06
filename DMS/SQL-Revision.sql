@@ -20,4 +20,17 @@ CREATE TABLE Dept
 	PRIMARY KEY (did) --add primary key - 2nd way
 );
 
+--Q3--
+
+CREATE TABLE Works
+(
+	eid INTEGER,
+	did VARCHAR (20),
+	pct_time INTEGER, 
+
+	CONSTRAINT Works_pk PRIMARY KEY (eid,did), -- add primary key - 3rd way
+	CONSTRAINT Works_Emp_fk FOREIGN KEY (eid) REFERENCES Emp, -- add foreign key - 2nd way
+	CONSTRAINT Works_Dept_fk FOREIGN KEY (did) REFERENCES Dept -- add foreign key - 2nd  way
+);
+
 
