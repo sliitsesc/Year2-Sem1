@@ -53,3 +53,12 @@ INSERT INTO Emp(eid,ename,age,salary) VALUES (1002,'Shaml',25,45000);
   
 SELECT *
 FROM Emp
+
+
+--Q6--
+UPDATE Emp
+SET hireDate = '1-Jan-2010'  -- update hireDate as '1-Jan-2010' whre the eid is '1000'
+WHERE eid = 1000;
+
+SELECT *
+FROM Emp 
