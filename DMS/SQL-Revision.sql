@@ -83,3 +83,12 @@ FROM Emp
 
 SELECT *
 FROM Emp 
+
+--Q9--
+-- nommally if we want to delete the table we used,
+DROP TABLE Emp;
+
+--since it referenced by a foreign constraints we cannot drop the Emp table in nomal way
+--inorder to drop the table
+			-- 1st way - we can drop the Dept and Works tables
+			-- 2nd way - we can drop the foreign keys in the Emp table
