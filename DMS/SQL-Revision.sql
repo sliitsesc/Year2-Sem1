@@ -39,4 +39,17 @@ INSERT INTO Emp VALUES (1000,'Ruwan', 33, 40000); -- insert value in to Emp tabl
 INSERT INTO Emp(eid,ename,salary) VALUES (1001,'Nuwan',55000); -- insert value in to Emp table - 2nd way(we can specify the table column)
 
 
+--Q5--
 
+ALTER TABLE Emp -- update table (ALTER)
+ADD hireDate date DEFAULT getDate(); -- add hireDate column to the Emp table and the default hireDate value is todays date (getDate)
+ 
+SELECT *
+FROM Emp
+-- Since this table was created and when we introduce a new value it will not get the default value, 
+			-- unless we updates. The column will be added unless we updates it we won't able to get the default value.
+ 
+INSERT INTO Emp(eid,ename,age,salary) VALUES (1002,'Shaml',25,45000);
+  
+SELECT *
+FROM Emp
