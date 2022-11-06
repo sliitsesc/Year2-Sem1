@@ -134,3 +134,14 @@ WHERE ename LIKE 'S%';
 										-- Ex: LIKE 'i%' - any sequence of characters can be after the 'i' and should start with 'i'
 				-- (2)       _   - any single characters
 										-- Ex: LIKE '%i_' - any sequence of characters can be before the 'i' and should end with any single character											
+
+
+
+--Q14-For each department display the department name and the name of the manager--
+ 
+--insert values to Dept table--
+INSERT INTO Dept VALUES ('D001',20000,1001);
+ 
+SELECT d.did,e.ename
+FROM Emp e, Dept d
+WHERE e.eid = d.managerID;
