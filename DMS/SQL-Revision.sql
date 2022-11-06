@@ -112,3 +112,8 @@ FROM Emp;
 SELECT ename,salary
 FROM Emp
 ORDER BY salary DESC;
+
+--Q12-Display the name and the salary of all employees who obtain a salary greater than 50000.--
+SELECT ename,salary
+FROM Emp
+WHERE salary > 50000
