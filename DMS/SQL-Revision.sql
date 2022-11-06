@@ -62,3 +62,24 @@ WHERE eid = 1000;
 
 SELECT *
 FROM Emp 
+
+--Q7--
+DELETE Emp
+WHERE eid = 1000;  -- delete row whre the eid is '1000'
+
+SELECT *
+FROM Emp
+-- but hireDate column is not possible to delete,
+			-- since we added hireDate column with default constraints we cannot drop the column in normal way
+
+-- inorder to drop the column with constraints,
+		    -- 1st step - drop the constraints
+			ALTER TABLE Emp
+			DROP CONSTRAINT DF__Emp__hireDate__668030F6;  -- constraint name will be automatically generated
+
+			-- 2nd step - drop the column
+			ALTER TABLE Emp
+			DROP COLUMN hireDate;
+
+SELECT *
+FROM Emp 
