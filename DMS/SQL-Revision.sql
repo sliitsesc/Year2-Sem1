@@ -38,6 +38,16 @@ CREATE TABLE Works
 INSERT INTO Emp VALUES (1000,'Ruwan', 33, 40000); -- insert value in to Emp table - 1st way
 INSERT INTO Emp(eid,ename,salary) VALUES (1001,'Nuwan',55000); -- insert value in to Emp table - 2nd way(we can specify the table column)
 
+-- get all data in the Emp 
+
+SELECT *
+FROM Emp;
+
+-- Select clause - basic form --
+		-- SELECT <attributes>
+		-- FROM <one or more relations>
+		-- WHERE <conditions>
+
 
 --Q5--
 
