@@ -107,3 +107,8 @@ DROP TABLE Emp;
 --Q10--
 SELECT ename,salary
 FROM Emp;
+
+--Q11-List the name and the salary of all employees in the descending order of his/her salary--
+SELECT ename,salary
+FROM Emp
+ORDER BY salary DESC;
