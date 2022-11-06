@@ -1,8 +1,12 @@
-/*Question 1*/
-create table emp(
-	eid integer primary key,
-	ename varchar(25) not null,
-	age int,
-	salary real,
-    constraint s check (salary > 0)
+--Q1--
+
+CREATE TABLE Emp
+(
+	eid INTEGER PRIMARY KEY,  --add primary key - 1st way
+	ename VARCHAR(225) NOT NULL,
+	age INTEGER,
+	salary REAL,
+
+	CONSTRAINT emp_chk CHECK (salary > 0)
 );
+
