@@ -15,7 +15,7 @@ CREATE TABLE Emp
 CREATE TABLE Dept
 (
 	did VARCHAR (20),
-	budger REAL,
+	budget REAL,
 	managerID INTEGER REFERENCES Emp, -- add foreign key - 1st way
 	PRIMARY KEY (did) --add primary key - 2nd way
 );
@@ -367,3 +367,11 @@ GROUP BY managerID
 HAVING MIN (budget) > 100000;
 --if someone is managing two departments and there should be a minimum budget. if the minimum budget is greater than
 			-- the 100000 LKS other department budget will also automatically grater than 100000 
+
+
+--Q27-Find the name of the manager who manages the departments with the largest budget--
+
+SELECT e.ename
+FROM Emp e, Dept d
+WHERE e.eid = d.managerID AND budget IN ( SELECT MAX(budget)
+											FROM Dept);
