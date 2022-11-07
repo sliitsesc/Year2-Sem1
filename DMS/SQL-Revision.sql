@@ -171,4 +171,13 @@ SELECT * FROM Works
 --answer--
 SELECT e.ename, d.managerID
 FROM Emp e, Works w, Dept d
-WHERE e.eid = w.eid AND d.did = w.did AND e.salary  >75000 
+WHERE e.eid = w.eid AND d.did = w.did AND e.salary  >75000
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Drop Table Works
+Drop Table Dept
+Drop Table Emp
+
+
