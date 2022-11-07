@@ -308,4 +308,10 @@ SELECT e.ename, w.did
 FROM Works w, Emp e
 WHERE w.eid = e.eid
 
+
+--Q20-Display the minimum and maximum salary of employees.
+
+SELECT ename, MAX(salary) AS 'Maximum Salary', MIN(salary) AS 'Minimun Salary'
+FROM Emp
+GROUP BY ename
 											 WHERE did ='Academic');
