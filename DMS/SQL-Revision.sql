@@ -321,4 +321,11 @@ SELECT e.ename,SUM( w.pct_time) AS 'Total of worked in'
 FROM Emp e, Works w
 WHERE e.eid =w.eid
 GROUP BY e.eid,e.ename
+
+--Q22-Display the department name and the number of employees in each department--
+
+SELECT d.did, COUNT(w.eid) AS 'No. of each employees in each department'
+FROM Works w, Dept d
+WHERE w.did = d.did
+GROUP BY d.did;
 											 WHERE did ='Academic');
