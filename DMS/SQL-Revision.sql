@@ -57,7 +57,7 @@ ADD hireDate date DEFAULT getDate(); -- add hireDate column to the Emp table and
 SELECT *
 FROM Emp
 -- Since this table was created and when we introduce a new value it will not get the default value, 
-			-- unless we updates. The column will be added unless we updates it we won't able to get the default value.
+	-- unless we updates. The column will be added unless we updates it we won't able to get the default value.
  
 INSERT INTO Emp(eid,ename,age,salary) VALUES (1002,'Shaml',25,45000);
   
@@ -130,10 +130,10 @@ WHERE ename LIKE 'S%';
 	-- syntax : <string> LIKE <pattern>
 	-- <pattern> may contain two special symbols: 
 				-- (1)       %   - any sequence of characters
-										-- Ex: LIKE '%i' - any sequence of characters can be before the 'i' and should end with 'i'
-										-- Ex: LIKE 'i%' - any sequence of characters can be after the 'i' and should start with 'i'
+							-- Ex: LIKE '%i' - any sequence of characters can be before the 'i' and should end with 'i'
+							-- Ex: LIKE 'i%' - any sequence of characters can be after the 'i' and should start with 'i'
 				-- (2)       _   - any single characters
-										-- Ex: LIKE '%i_' - any sequence of characters can be before the 'i' and should end with any single character											
+							-- Ex: LIKE '%i_' - any sequence of characters can be before the 'i' and should end with any single character											
 
 
 
@@ -255,14 +255,14 @@ INSERT INTO Works VALUES(1009,'Admin',100);
 SELECT ename 
 FROM Emp
 WHERE eid NOT IN ( SELECT DISTINCT eid    -- DISTINCT - remove duplicates
-				   FROM Works );
+		   FROM Works );
 
 -- 2nd way - using NOT EXISTS
 SELECT e.ename 
 FROM Emp e
 WHERE NOT EXISTS ( SELECT *    
-				   FROM Works w
-				   WHERE w.eid = e.eid);
+		   FROM Works w
+		   WHERE w.eid = e.eid);
 
 -- 3rd way - outer join
 SELECT e.ename
@@ -289,16 +289,17 @@ WHERE e.eid = w.eid AND (w.did = 'ITSD' OR w.did = 'Academic');
 SELECT DISTINCT e.ename , e.age
 FROM Emp e, Works w
 WHERE e.eid = w.eid AND w.did = 'ITSD' AND w.eid IN (SELECT eid 
-													 FROM Works 
+						     FROM Works
+						     WHERE did ='Academic');
 --2nd way 
 SELECT DISTINCT e.ename , e.age
 FROM Emp e, Works w
 WHERE e.eid = w.eid AND w.eid IN (SELECT eid 
-								  FROM Works 
-								  WHERE did = 'ITSD')  AND 
-						w.eid IN (SELECT eid 
-								  FROM Works 
-								  WHERE did = 'Academic');	
+				  FROM Works 
+				  WHERE did = 'ITSD')  AND 
+			w.eid IN (SELECT eid 
+			          FROM Works 
+				  WHERE did = 'Academic');	
 								  
 
 
@@ -354,9 +355,9 @@ WHERE e.eid = w.eid AND w.did = d.did AND  d.budget < e.salary
 --SELECT e.ename
 --FROM Emp e
 --WHERE e.salary > ALL (SELECT d.budget 
-					  --FROM Dept d, Works w
-					  --WHERE e.eid = w.eid AND w.did = d.did)    -- this will display expected anser with Surangi and Amali 
-																  -- since they haven't any department it also display
+		      --FROM Dept d, Works w
+		      --WHERE e.eid = w.eid AND w.did = d.did)    -- this will display expected anser with Surangi and Amali 
+								  -- since they haven't any department it also display
 
 
 --Q26-Find the manager ids of managers who manage only departments with budgets greater than 100000 LKR--
@@ -366,7 +367,7 @@ FROM Dept
 GROUP BY managerID
 HAVING MIN (budget) > 100000;
 --if someone is managing two departments and there should be a minimum budget. if the minimum budget is greater than
-			-- the 100000 LKS other department budget will also automatically grater than 100000 
+	-- the 100000 LKS other department budget will also automatically grater than 100000 
 
 
 --Q27-Find the name of the manager who manages the departments with the largest budget--
@@ -392,5 +393,5 @@ SELECT managerID
 FROM Dept
 GROUP BY managerID
 HAVING SUM(budget) >=ALL (SELECT  SUM(budget)
-					  FROM Dept
-					  GROUP BY managerID);
+			  FROM Dept
+			  GROUP BY managerID);
