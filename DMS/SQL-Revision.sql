@@ -344,4 +344,9 @@ FROM Emp e, Works w
 WHERE e.eid =w.eid
 GROUP BY w.did
 HAVING SUM( e.salary)>100000;
-											 WHERE did ='Academic');
+
+--Q25- Display the name of each employee whose salary exceeds the budget of all departments that he or she work in--
+
+SELECT e.ename
+FROM Emp e, Dept d ,Works w
+WHERE e.eid = w.eid AND w.did = d.did AND  d.budget < e.salary 
