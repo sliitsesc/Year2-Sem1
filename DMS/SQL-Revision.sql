@@ -275,3 +275,10 @@ WHERE w.did IS NULL;
 SELECT DISTINCT e.ename , e.age
 FROM Emp e, Works w
 WHERE e.eid = w.eid AND w.did IN ('ITSD','Academic');
+
+
+-- 2nd way - using OR                                                                     
+SELECT DISTINCT e.ename , e.age
+FROM Emp e, Works w
+WHERE e.eid = w.eid AND (w.did = 'ITSD' OR w.did = 'Academic');
+
