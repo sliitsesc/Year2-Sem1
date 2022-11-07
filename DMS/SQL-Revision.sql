@@ -350,3 +350,10 @@ HAVING SUM( e.salary)>100000;
 SELECT e.ename
 FROM Emp e, Dept d ,Works w
 WHERE e.eid = w.eid AND w.did = d.did AND  d.budget < e.salary 
+
+--SELECT e.ename
+--FROM Emp e
+--WHERE e.salary > ALL (SELECT d.budget 
+					  --FROM Dept d, Works w
+					  --WHERE e.eid = w.eid AND w.did = d.did)    -- this will display expected anser with Surangi and Amali 
+																  -- since they haven't any department it also display
