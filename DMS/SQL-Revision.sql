@@ -328,4 +328,12 @@ SELECT d.did, COUNT(w.eid) AS 'No. of each employees in each department'
 FROM Works w, Dept d
 WHERE w.did = d.did
 GROUP BY d.did;
+
+--Q23- Display the names of the employee who work more than 90%--
+
+SELECT e.ename,SUM( w.pct_time) AS 'Emp. who worked more than 90'
+FROM Emp e, Works w
+WHERE e.eid =w.eid
+GROUP BY e.eid,e.ename
+HAVING SUM( w.pct_time) > 90; 
 											 WHERE did ='Academic');
