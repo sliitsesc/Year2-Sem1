@@ -382,4 +382,15 @@ WHERE e.eid = d.managerID AND budget IN ( SELECT MAX(budget)
 SELECT managerID
 FROM Dept 
 GROUP BY managerID
-HAVING SUM (budget) > 500000;										
+HAVING SUM (budget) > 500000;	
+
+
+
+--Q29-Find the manager id of manager who controls the largest amount--
+
+SELECT managerID 
+FROM Dept
+GROUP BY managerID
+HAVING SUM(budget) >=ALL (SELECT  SUM(budget)
+					  FROM Dept
+					  GROUP BY managerID);
