@@ -357,3 +357,13 @@ WHERE e.eid = w.eid AND w.did = d.did AND  d.budget < e.salary
 					  --FROM Dept d, Works w
 					  --WHERE e.eid = w.eid AND w.did = d.did)    -- this will display expected anser with Surangi and Amali 
 																  -- since they haven't any department it also display
+
+
+--Q26-Find the manager ids of managers who manage only departments with budgets greater than 100000 LKR--
+
+SELECT managerID
+FROM Dept 
+GROUP BY managerID
+HAVING MIN (budget) > 100000;
+--if someone is managing two departments and there should be a minimum budget. if the minimum budget is greater than
+			-- the 100000 LKS other department budget will also automatically grater than 100000 
