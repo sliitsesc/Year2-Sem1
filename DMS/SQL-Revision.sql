@@ -256,3 +256,10 @@ SELECT ename
 FROM Emp
 WHERE eid NOT IN ( SELECT DISTINCT eid    -- DISTINCT - remove duplicates
 				   FROM Works );
+
+-- 2nd way - using NOT EXISTS
+SELECT e.ename 
+FROM Emp e
+WHERE NOT EXISTS ( SELECT *    -- DISTINCT - remove duplicates
+				   FROM Works w
+				   WHERE w.eid = e.eid);
