@@ -336,4 +336,12 @@ FROM Emp e, Works w
 WHERE e.eid =w.eid
 GROUP BY e.eid,e.ename
 HAVING SUM( w.pct_time) > 90; 
+
+--Q24- Display the name of departments who have the total of salary exceeding 100000 LKR--
+
+SELECT w.did,SUM( e.salary) AS 'Total salary' 
+FROM Emp e, Works w
+WHERE e.eid =w.eid
+GROUP BY w.did
+HAVING SUM( e.salary)>100000;
 											 WHERE did ='Academic');
