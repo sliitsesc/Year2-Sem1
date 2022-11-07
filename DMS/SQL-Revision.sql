@@ -290,4 +290,12 @@ SELECT DISTINCT e.ename , e.age
 FROM Emp e, Works w
 WHERE e.eid = w.eid AND w.did = 'ITSD' AND w.eid IN (SELECT eid 
 													 FROM Works 
-													 WHERE did ='Academic');
+--2nd way 
+SELECT DISTINCT e.ename , e.age
+FROM Emp e, Works w
+WHERE e.eid = w.eid AND w.eid IN (SELECT eid 
+								  FROM Works 
+								  WHERE did = 'ITSD')  AND 
+						w.eid IN (SELECT eid 
+								  FROM Works 
+								  WHERE did = 'Academic');												 WHERE did ='Academic');
