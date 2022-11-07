@@ -314,4 +314,11 @@ WHERE w.eid = e.eid
 SELECT ename, MAX(salary) AS 'Maximum Salary', MIN(salary) AS 'Minimun Salary'
 FROM Emp
 GROUP BY ename
+
+--Q21-Display the employees’ name and the total percentage he/she has worked in total--
+
+SELECT e.ename,SUM( w.pct_time) AS 'Total of worked in'
+FROM Emp e, Works w
+WHERE e.eid =w.eid
+GROUP BY e.eid,e.ename
 											 WHERE did ='Academic');
