@@ -282,3 +282,12 @@ SELECT DISTINCT e.ename , e.age
 FROM Emp e, Works w
 WHERE e.eid = w.eid AND (w.did = 'ITSD' OR w.did = 'Academic');
 
+
+--Q18 - Display the names and the ages of each employee who works in both ‘ITSD’ and ‘Academic’ departments--
+
+--1st way 
+SELECT DISTINCT e.ename , e.age
+FROM Emp e, Works w
+WHERE e.eid = w.eid AND w.did = 'ITSD' AND w.eid IN (SELECT eid 
+													 FROM Works 
+													 WHERE did ='Academic');
