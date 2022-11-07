@@ -269,3 +269,9 @@ SELECT e.ename
 FROM Emp e LEFT OUTER JOIN Works w ON e.eid = w.eid
 WHERE w.did IS NULL;
 
+--Q17 -Display the names and the ages of each employee who works in either ‘ITSD’ or ‘Academic’ departments--
+
+-- 1st way - using IN
+SELECT DISTINCT e.ename , e.age
+FROM Emp e, Works w
+WHERE e.eid = w.eid AND w.did IN ('ITSD','Academic');
