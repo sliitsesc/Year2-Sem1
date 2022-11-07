@@ -263,5 +263,9 @@ FROM Emp e
 WHERE NOT EXISTS ( SELECT *    
 				   FROM Works w
 				   WHERE w.eid = e.eid);
-				   
+
+-- 3rd way - outer join
+SELECT e.ename
+FROM Emp e LEFT OUTER JOIN Works w ON e.eid = w.eid
+WHERE w.did IS NULL;
 
