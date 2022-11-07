@@ -298,4 +298,14 @@ WHERE e.eid = w.eid AND w.eid IN (SELECT eid
 								  WHERE did = 'ITSD')  AND 
 						w.eid IN (SELECT eid 
 								  FROM Works 
-								  WHERE did = 'Academic');												 WHERE did ='Academic');
+								  WHERE did = 'Academic');	
+								  
+
+
+--Q19-For all departments, display the name of the department and the names of the employees working in it--
+
+SELECT e.ename, w.did 
+FROM Works w, Emp e
+WHERE w.eid = e.eid
+
+											 WHERE did ='Academic');
