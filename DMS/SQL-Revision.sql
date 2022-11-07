@@ -377,9 +377,9 @@ WHERE e.eid = d.managerID AND budget IN ( SELECT MAX(budget)
 	
 
 --Q28-If a manager manages more than one department, he or she controls the sum of all the budgets for
-	    --those departments. Fi nd the manager id of the managers who control more than 5,000,000 LKR--
+	    --those departments. Find the manager id of the managers who control more than 5,000,000 LKR--
 
 SELECT managerID
 FROM Dept 
 GROUP BY managerID
-HAVING SUM (budget) > 500000;										FROM Dept);
+HAVING SUM (budget) > 500000;										
