@@ -248,3 +248,11 @@ INSERT INTO Works VALUES(1008,'Maintenance',30);
 INSERT INTO Works VALUES(1009,'Admin',100);
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--Q16-Display the names of employees who are not assigned to any department yet --
+
+-- 1st way - using NOT IN
+SELECT ename 
+FROM Emp
+WHERE eid NOT IN ( SELECT DISTINCT eid    -- DISTINCT - remove duplicates
+				   FROM Works );
