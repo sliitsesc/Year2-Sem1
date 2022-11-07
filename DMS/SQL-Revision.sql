@@ -231,3 +231,20 @@ INSERT INTO Dept VALUES('Maintenance',40000,1004);
 INSERT INTO Dept VALUES('SESD',20000,1004);
 INSERT INTO Dept VALUES('Marketing',90000,1008);
 
+INSERT INTO Works VALUES(1000,'Admin',40);
+INSERT INTO Works VALUES(1000,'ITSD',50);
+INSERT INTO Works VALUES(1001,'Admin',100);
+INSERT INTO Works VALUES(1002,'Academic',100);
+INSERT INTO Works VALUES(1003,'Academic',20);
+INSERT INTO Works VALUES(1003,'Admin',20);
+INSERT INTO Works VALUES(1003,'ITSD',45);
+INSERT INTO Works VALUES(1004,'Academic',60);
+INSERT INTO Works VALUES(1004,'Finance',30);
+INSERT INTO Works VALUES(1006,'Finance',30);
+INSERT INTO Works VALUES(1006,'Maintenance',52);
+INSERT INTO Works VALUES(1008,'Finance',35);
+INSERT INTO Works VALUES(1008,'ITSD',30);
+INSERT INTO Works VALUES(1008,'Maintenance',30);
+INSERT INTO Works VALUES(1009,'Admin',100);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
